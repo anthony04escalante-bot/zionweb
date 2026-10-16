@@ -12,7 +12,7 @@
 - Web de negocio: $250. Hasta 5 secciones, galería, formulario y estadísticas de visitas. Incluye aplicación web instalable.
 - Catálogo o tienda: $290. Productos con foto y precio, pedidos por WhatsApp y panel para cambiar precios.
 - Funciones extra: reservas y citas (+$45), menú o catálogo digital (+$40), cotizador (+$55), pagos en línea con Yappy, PayPal o tarjeta (+$80), español e inglés (+$40), logo (+$55).
-- Dominio y hosting aparte: $70 al año, o plan mensual de $18 con cambios pequeños incluidos.
+- Hosting aparte: $25 al año con dirección gratis (tunegocio.pages.dev), $70 al año con dominio .com propio, o plan mensual de $18 con cambios pequeños incluidos.
 
 ## Cómo funciona
 1. El cliente escribe DEMO por WhatsApp.
