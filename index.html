@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zion Web | Páginas web en Panamá desde $100</title>
+<meta name="theme-color" content="#F5F9F6">
+<link rel="canonical" href="/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PA">
+<meta property="og:site_name" content="Zion Web">
+<meta property="og:title" content="Zion Web | Primero la ves, después pagas">
+<meta property="og:description" content="Páginas web y aplicaciones a la medida en Panamá, desde $100. Te creamos tu página de muestra gratis.">
+<meta property="og:image" content="/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Primero la ves, después pagas. Páginas web y aplicaciones a la medida en Panamá, desde $100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: página clara de una columna (1200 px). Fondo verde muy pálido, tinta verde casi negra, fósforo solo como resaltado.
+   Movimiento: una entrada orquestada en el inicio, revelados con clip-path en imágenes y transiciones con desenfoque en el cotizador. */
+:root{
+  --fondo:#F5F9F6; --blanco:#FFFFFF; --hoja:#EAF3ED; --linea:#D7E5DC;
+  --tinta:#0B1A12; --gris:#4A5E52; --verde:#0A8F4E; --fosforo:#3DFF8A; --menta:#C9F9DC;
+  --f-d:"Chakra Petch","Arial Narrow",system-ui,sans-serif;
+  --f-b:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-m:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
+  --sombra:0 1px 2px rgba(11,26,18,.06),0 12px 32px -12px rgba(11,26,18,.18);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--tinta);font:400 1.0625rem/1.6 var(--f-b);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2.5px solid var(--verde);outline-offset:3px;border-radius:10px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+h1,h2,h3{font-family:var(--f-d);font-weight:700;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h2{font-size:clamp(2.1rem,4.8vw,3.4rem);line-height:1}
+h3{font-size:1.375rem;line-height:1.15}
+p{margin:0}
+.lead{color:var(--gris);font-size:1.125rem;max-width:58ch}
+section{padding-block:clamp(72px,10vw,120px)}
+.head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(32px,5vw,52px)}
+.marca-txt{background:linear-gradient(transparent 62%,var(--menta) 62%,var(--menta) 92%,transparent 92%)}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:14px;font:700 1rem var(--f-b);text-decoration:none;border:0;cursor:pointer;transition:transform 160ms var(--ease),background-color 200ms ease,box-shadow 200ms ease,opacity 200ms ease}
+.btn:active{transform:scale(.97)}
+.btn-pri{background:var(--tinta);color:#fff;box-shadow:0 10px 24px -10px rgba(11,26,18,.55)}
+.btn-wa{background:var(--fosforo);color:var(--tinta)}
+.btn-sec{background:var(--blanco);color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--linea)}
+.btn[disabled]{opacity:.35;cursor:not-allowed;transform:none}
+@media (hover:hover){.btn-pri:not([disabled]):hover{background:#18352A}.btn-sec:hover{box-shadow:inset 0 0 0 1.5px var(--tinta)}.btn-wa:hover{background:#6BFFA7}}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* Navegación */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--fondo)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:rgba(245,249,246,.78);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid transparent;transition:border-color 200ms ease}
+.nav.scrolled{border-bottom-color:var(--linea)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.brand{display:inline-flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none;color:var(--tinta)}
+.logo{display:flex;align-items:center;gap:.16em;font:400 29px/1 "Michroma","Arial Black",sans-serif}
+.logo svg{width:.86em;height:.86em;flex:none}
+.logo .pupila{fill:var(--verde);transform-box:fill-box;transform-origin:center;animation:abre 900ms var(--ease) 350ms both,parpadea 7s ease-in-out 2.5s infinite}
+@keyframes abre{from{transform:scaleY(.14)}}
+@keyframes parpadea{0%,95%,100%{transform:none}97.5%{transform:scaleY(.14)}}
+.logo-web{font:400 9px/1 "Michroma",sans-serif;letter-spacing:1.15em;padding-left:1.15em;color:var(--gris)}
+.links{display:none;gap:30px;font-weight:600;font-size:.9375rem}
+.links a{text-decoration:none;color:var(--gris);transition:color 160ms ease}
+@media (hover:hover){.links a:hover{color:var(--tinta)}}
+@media (min-width:920px){.links{display:flex}}
+.nav .btn{min-height:44px;padding:0 18px;font-size:.9375rem}
+
+/* Inicio */
+.hero{position:relative;padding-block:clamp(40px,6vw,72px) clamp(64px,8vw,96px);overflow:hidden}
+#lluvia{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.45),#000 55%);mask-image:linear-gradient(90deg,rgba(0,0,0,.45),#000 55%)}
+@media (max-width:979px){#lluvia{opacity:.4}}
+.hero .wrap{position:relative;display:grid;gap:48px;align-items:center}
+@media (min-width:980px){.hero .wrap{grid-template-columns:1.12fr .95fr;gap:56px}}
+.hero-copy{display:flex;flex-direction:column;gap:24px}
+.chip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:20px;line-height:1.35;background:var(--blanco);box-shadow:var(--sombra);font-weight:600;font-size:.9375rem}
+.chip i{width:10px;height:10px;border-radius:50%;background:var(--fosforo);box-shadow:0 0 0 4px rgba(61,255,138,.25);animation:latido 2.4s ease-in-out infinite}
+@keyframes latido{50%{box-shadow:0 0 0 7px rgba(61,255,138,.08)}}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.75rem);line-height:.95;letter-spacing:-.025em}
+.hero h1 .w{display:inline-block;animation:palabra 900ms var(--ease) both;animation-delay:calc(var(--i)*70ms + 80ms)}
+@keyframes palabra{from{opacity:0;transform:translateY(.35em);filter:blur(10px)}}
+.cursor{display:inline-block;width:.38em;height:.8em;background:var(--fosforo);vertical-align:-.04em;margin-left:.1em;animation:parpadeo 1.1s steps(1) infinite}
+@keyframes parpadeo{50%{opacity:0}}
+.sube{animation:sube 800ms var(--ease) both;animation-delay:var(--d,0ms)}
+@keyframes sube{from{opacity:0;transform:translateY(18px);filter:blur(6px)}}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.datos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:560px}
+.datos div{padding:14px 16px;border-radius:16px;background:var(--blanco);box-shadow:var(--sombra)}
+.datos b{display:block;font:700 1.25rem/1.1 var(--f-d)}
+.datos span{color:var(--gris);font-size:.8125rem;line-height:1.3;display:block;margin-top:4px}
+.escena{position:relative;aspect-ratio:5/4.6;max-width:100%}
+.foto{position:absolute;overflow:hidden;border-radius:28px;box-shadow:0 30px 60px -28px rgba(11,26,18,.45);animation:recorte 1200ms var(--ease-io) both;animation-delay:var(--d,0ms)}
+.foto img{width:100%;height:100%;object-fit:cover;animation:zoom 1600ms var(--ease) both;animation-delay:var(--d,0ms)}
+@keyframes recorte{from{clip-path:inset(18% 18% 18% 18% round 28px)}to{clip-path:inset(0 0 0 0 round 28px)}}
+@keyframes zoom{from{transform:scale(1.18)}}
+.f1{inset:0 14% 12% 0}
+.f2{width:46%;aspect-ratio:1;right:0;bottom:0;border:6px solid var(--fondo);border-radius:32px}
+.flota-ui{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--sombra);font-size:.875rem;animation:aparece 700ms var(--ease) both,flotar 6s ease-in-out infinite;animation-delay:var(--d),calc(var(--d) + 700ms)}
+.flota-ui b{display:block;font-weight:700;font-size:.9375rem}
+.flota-ui span{color:var(--gris)}
+.flota-ui .ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--menta);color:var(--verde);flex:none}
+.flota-ui .ic svg{width:20px;height:20px}
+.u1{left:-4%;top:10%}.u2{right:4%;top:38%}.u3{left:6%;bottom:2%}
+@keyframes aparece{from{opacity:0;transform:translateY(14px) scale(.96);filter:blur(6px)}}
+@keyframes flotar{50%{translate:0 -6px}}
+
+/* Cinta de rubros */
+.cinta{padding-block:22px;border-block:1px solid var(--linea);background:var(--blanco);overflow:hidden}
+.cinta-track{display:flex;gap:44px;width:max-content;animation:cinta 38s linear infinite}
+.cinta span{display:flex;align-items:center;gap:44px;font:600 1.125rem var(--f-d);color:var(--gris);white-space:nowrap}
+.cinta span::after{content:"";width:8px;height:8px;border-radius:2px;background:var(--fosforo);transform:rotate(45deg)}
+@keyframes cinta{to{transform:translateX(-50%)}}
+@media (hover:hover){.cinta:hover .cinta-track{animation-play-state:paused}}
+
+/* Servicios */
+.servicios{display:grid;gap:20px}
+@media (min-width:880px){.servicios{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.serv{display:flex;flex-direction:column;background:var(--blanco);border-radius:24px;overflow:hidden;box-shadow:var(--sombra);transition:transform 300ms var(--ease),box-shadow 300ms var(--ease)}
+@media (hover:hover){.serv:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(11,26,18,.06),0 26px 48px -20px rgba(11,26,18,.3)}.serv:hover .serv-img img{transform:scale(1.06)}}
+.serv-img{aspect-ratio:16/10;overflow:hidden}
+.serv-img img{width:100%;height:100%;object-fit:cover;transition:transform 700ms var(--ease)}
+.serv-body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.serv-body p{color:var(--gris)}
+.precio{display:flex;align-items:baseline;gap:10px;padding-top:6px;color:var(--gris);font-size:.9375rem}
+.precio b{font:700 2.25rem/1 var(--f-d);color:var(--tinta)}
+.incl{list-style:none;margin:8px 0 0;padding:18px 0 0;border-top:1px solid var(--linea);display:flex;flex-direction:column;gap:10px;font-size:.9375rem;line-height:1.45}
+.incl li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px}
+.incl li::before{content:"";width:20px;height:20px;margin-top:1px;border-radius:50%;background:var(--menta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A8F4E' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+.incl li.base{display:block;font-weight:700}
+.incl li.base::before{display:none}
+.incl li.app{font-weight:700}
+.incl li.app::before{background-color:var(--fosforo)}
+.app-box{margin-top:24px;display:grid;gap:26px;align-items:center;padding:clamp(24px,4vw,44px);border-radius:28px;background:var(--tinta);color:#EAF5EE;position:relative;overflow:hidden}
+.app-box::before{content:"";position:absolute;width:340px;height:340px;left:-140px;bottom:-180px;border-radius:50%;background:radial-gradient(circle,rgba(61,255,138,.28),transparent 70%);pointer-events:none}
+@media (min-width:920px){.app-box{grid-template-columns:1fr 1.1fr;gap:48px}}
+.app-tx{position:relative;display:flex;flex-direction:column;gap:12px}
+.app-tx h3{font-size:clamp(1.6rem,3vw,2.2rem)}
+.app-tx p{color:#B5CCBE;max-width:52ch}
+.funcs{position:relative;display:flex;flex-direction:column;gap:12px}
+.func{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:16px;border-radius:18px;background:rgba(234,245,238,.06);border:1px solid rgba(234,245,238,.1)}
+.func .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(61,255,138,.14);color:var(--fosforo)}
+.func .ic svg{width:22px;height:22px}
+.func b{display:block;margin-bottom:2px}
+.func span:not(.ic){color:#A9C3B3;font-size:.9375rem;line-height:1.45}
+.pub-box{margin-top:24px;padding:clamp(22px,3.5vw,40px);border-radius:28px;background:var(--blanco);border:1.5px dashed #B3CDBD;display:flex;flex-direction:column;gap:12px}
+.pub-lead{color:var(--gris);max-width:68ch}
+.pub-lead b{color:var(--tinta);font-weight:600}
+.pub-ops{display:grid;gap:12px;margin-top:6px}
+@media (min-width:760px){.pub-ops{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.pub-op{padding:20px;border-radius:20px;background:var(--fondo);border:1.5px solid var(--linea);display:flex;flex-direction:column;gap:4px}
+.pub-op.destacada{border-color:var(--tinta);background:var(--blanco)}
+.pub-op b{font:700 1.75rem/1.1 var(--f-d)}
+.pub-op b small{font:500 .9375rem var(--f-b);color:var(--gris)}
+.pub-op span{font-weight:700}
+.pub-op p{color:var(--gris);font-size:.9375rem}
+.pub-nota{color:var(--gris);font-size:.9375rem;margin-top:4px}
+
+/* Cotizador */
+.cot{background:linear-gradient(180deg,var(--fondo),var(--hoja))}
+.cot-box{background:var(--blanco);border-radius:32px;box-shadow:0 2px 4px rgba(11,26,18,.05),0 40px 80px -40px rgba(11,26,18,.35);overflow:hidden;display:grid}
+@media (min-width:1000px){.cot-box{grid-template-columns:minmax(0,1fr) 360px}}
+.cot-main{padding:clamp(22px,4vw,44px);display:flex;flex-direction:column;gap:22px;min-width:0}
+.progreso{display:flex;flex-direction:column;gap:10px}
+.progreso-top{display:flex;justify-content:space-between;font-weight:600;font-size:.9375rem;color:var(--gris)}
+.barra{height:6px;border-radius:99px;background:var(--hoja);overflow:hidden}
+.barra i{display:block;height:100%;width:20%;border-radius:inherit;background:linear-gradient(90deg,var(--verde),var(--fosforo));transition:width 500ms var(--ease)}
+.paso{display:none}
+.paso.on{display:block;animation:entra 420ms var(--ease) both}
+.paso.on.atras{animation-name:entraAtras}
+@keyframes entra{from{opacity:0;transform:translateX(22px);filter:blur(6px)}}
+@keyframes entraAtras{from{opacity:0;transform:translateX(-22px);filter:blur(6px)}}
+.paso h3{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:6px}
+.paso>p{color:var(--gris);margin-bottom:20px}
+.ops{display:grid;gap:10px}
+@media (min-width:620px){.ops.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.ops.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.op{position:relative;display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:var(--fondo);border:1.5px solid var(--linea);cursor:pointer;transition:border-color 180ms ease,background-color 180ms ease,transform 160ms var(--ease)}
+.op:active{transform:scale(.985)}
+.op input{position:absolute;opacity:0;pointer-events:none}
+.op .tic{flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;border:1.5px solid #9DB3A5;display:grid;place-items:center;background:var(--blanco);transition:border-color 160ms ease,background-color 160ms ease}
+.op.check .tic{border-radius:7px}
+.op .tic svg{width:14px;height:14px;color:var(--tinta);opacity:0;transform:scale(.6);transition:opacity 160ms ease,transform 220ms var(--ease)}
+.op:has(input:checked){border-color:var(--tinta);background:var(--blanco);box-shadow:0 8px 20px -12px rgba(11,26,18,.35)}
+.op:has(input:checked) .tic{background:var(--fosforo);border-color:var(--fosforo)}
+.op:has(input:checked) .tic svg{opacity:1;transform:scale(1)}
+.op:has(input:focus-visible){outline:2.5px solid var(--verde);outline-offset:3px}
+.op-tx{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.op-tx b{font-weight:700}
+.op-tx small{color:var(--gris);font-size:.875rem;line-height:1.45}
+.op .pr{flex:none;font:700 .9375rem var(--f-m);white-space:nowrap}
+.op .reco{position:absolute;top:-10px;right:14px;padding:2px 10px;border-radius:99px;background:var(--fosforo);font:700 .75rem var(--f-b);color:var(--tinta);opacity:0;transform:translateY(4px);transition:opacity 200ms ease,transform 300ms var(--ease);pointer-events:none}
+.op.recomendado .reco{opacity:1;transform:none}
+.rubro{flex-direction:column;align-items:flex-start;gap:10px;padding:18px}
+.rubro .tic{position:absolute;top:14px;right:14px}
+.rubro .em{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--menta);color:var(--verde)}
+.rubro .em svg{width:22px;height:22px}
+.campos{display:grid;gap:12px;margin-top:6px}
+@media (min-width:620px){.campos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.campos label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.9375rem}
+.campos input{height:52px;border-radius:14px;border:1.5px solid var(--linea);background:var(--fondo);color:var(--tinta);padding:0 14px;font:400 1rem var(--f-b);transition:border-color 160ms ease,background-color 160ms ease}
+.campos input:focus{outline:none;border-color:var(--tinta);background:var(--blanco)}
+.subt{font:700 1.0625rem var(--f-b);margin:22px 0 10px}
+.cot-nav{display:flex;justify-content:space-between;gap:12px;margin-top:8px}
+.cot-side{background:var(--tinta);color:#EAF5EE;padding:clamp(24px,3.5vw,36px);display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden}
+.cot-side::before{content:"";position:absolute;width:280px;height:280px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(61,255,138,.35),transparent 70%);pointer-events:none}
+.cot-side h4{margin:0;font:700 1.125rem var(--f-d)}
+.lineas{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:.9375rem;min-height:120px}
+.lineas li{display:flex;justify-content:space-between;gap:14px;color:#A9C3B3;animation:linea 360ms var(--ease) both}
+@keyframes linea{from{opacity:0;transform:translateY(6px)}}
+.lineas li span:last-child{font-family:var(--f-m);color:#EAF5EE;white-space:nowrap}
+.lineas .vacio{color:#7D978A}
+.lineas li span.t{font-family:var(--f-b);text-align:right}
+.total{border-top:1px dashed rgba(234,245,238,.2);padding-top:18px;display:flex;flex-direction:column;gap:4px;margin-top:auto}
+.total span{color:#A9C3B3;font-size:.9375rem}
+.total b{font:700 clamp(2.6rem,5vw,3.4rem)/1 var(--f-d);font-variant-numeric:tabular-nums;color:#fff}
+.total small{font:600 .9375rem var(--f-m);color:var(--fosforo);min-height:1.4em}
+.nota{font-size:.8125rem;color:#93AD9F;line-height:1.5}
+
+/* Demo */
+.demo{display:grid;gap:44px;align-items:center}
+@media (min-width:920px){.demo{grid-template-columns:1fr 1fr;gap:72px}}
+.demo-img{border-radius:28px;overflow:hidden;aspect-ratio:4/3.3;box-shadow:0 30px 60px -30px rgba(11,26,18,.4)}
+.demo-img img{width:100%;height:100%;object-fit:cover}
+.pasos{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:14px;counter-reset:p}
+.pasos li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:18px;border-radius:20px;background:var(--blanco);box-shadow:var(--sombra)}
+.pasos .n{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font:700 1.125rem var(--f-m);background:var(--tinta);color:var(--fosforo)}
+.pasos b{display:block;font-weight:700;font-size:1.0625rem;margin-bottom:2px}
+.pasos p{color:var(--gris);font-size:.9375rem}
+
+/* Trabajos */
+.trabajos{display:grid;gap:22px}
+@media (min-width:880px){.trabajos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.caso{display:flex;flex-direction:column;border-radius:26px;background:var(--blanco);box-shadow:var(--sombra);overflow:hidden;text-decoration:none;transition:transform 300ms var(--ease),box-shadow 300ms var(--ease)}
+@media (hover:hover){.caso:hover{transform:translateY(-6px);box-shadow:0 26px 48px -20px rgba(11,26,18,.3)}}
+.nav-mock{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--linea);font:500 .8125rem var(--f-m);color:var(--gris);background:var(--fondo)}
+.nav-mock i{width:10px;height:10px;border-radius:50%;background:var(--linea)}
+.nav-mock span{margin-left:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot{aspect-ratio:16/10;overflow:hidden;background:var(--hoja)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 900ms var(--ease)}
+@media (hover:hover){.caso:hover .shot img{transform:scale(1.04)}}
+.caso-tx{padding:24px;display:flex;flex-direction:column;gap:8px}
+.caso-tx p{color:var(--gris)}
+.caso-tx em{font-style:normal;color:var(--verde);font-weight:700;font-size:.9375rem;margin-top:4px}
+
+/* Preguntas */
+.faq-in{max-width:820px;display:flex;flex-direction:column;gap:10px}
+details{border-radius:18px;background:var(--blanco);border:1px solid var(--linea);transition:border-color 200ms ease}
+details[open]{border-color:var(--tinta)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 22px;font:700 1.0625rem/1.35 var(--f-b)}
+summary::-webkit-details-marker{display:none}
+summary .mas{flex:none;width:30px;height:30px;border-radius:10px;background:var(--hoja);position:relative;transition:background-color 200ms ease,transform 300ms var(--ease)}
+summary .mas::before,summary .mas::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--tinta);border-radius:2px}
+summary .mas::after{transform:rotate(90deg);transition:transform 300ms var(--ease)}
+details[open] summary .mas{background:var(--fosforo)}
+details[open] summary .mas::after{transform:rotate(0)}
+details p{padding:0 22px 22px;color:var(--gris);max-width:68ch}
+
+/* Cierre */
+.cierre{padding-top:0}
+.cierre-box{position:relative;border-radius:36px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end}
+.cierre-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cierre-box::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,18,0) 20%,rgba(11,26,18,.82))}
+.cierre-tx{position:relative;z-index:1;padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;gap:18px;color:#fff;max-width:720px}
+.cierre-tx .lead{color:#DCEDE2}
+
+footer{padding-block:40px calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--linea)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;align-items:flex-end}
+footer p{color:var(--gris);font-size:.9375rem}
+.contacto b{display:block;font:700 1.25rem var(--f-m);user-select:all}
+
+.wa-flota{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:14;width:60px;height:60px;border-radius:50%;background:var(--fosforo);color:var(--tinta);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(11,26,18,.5);transition:transform 160ms var(--ease)}
+.wa-flota:active{transform:scale(.94)}
+.wa-flota svg{width:28px;height:28px}
+
+/* Revelados al bajar: solo si hay JavaScript; siempre terminan visibles */
+.js [data-r]{opacity:0;transform:translateY(22px);filter:blur(8px);transition:opacity 800ms var(--ease),transform 900ms var(--ease),filter 800ms var(--ease);transition-delay:var(--d,0ms)}
+.js [data-r].in{opacity:1;transform:none;filter:none}
+.js [data-clip]{clip-path:inset(14% 10% 14% 10% round 28px);transition:clip-path 1100ms var(--ease-io)}
+.js [data-clip] img{transform:scale(1.14);transition:transform 1400ms var(--ease)}
+.js [data-clip].in{clip-path:inset(0 0 0 0 round 28px)}
+.js [data-clip].in img{transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js [data-r]{opacity:1;transform:none;filter:none}
+  .js [data-clip]{clip-path:none}.js [data-clip] img{transform:none}
+}
+</style>
+
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Zion Web, inicio">
+      <span class="logo" aria-hidden="true"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span>
+    </a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#precios">Precios</a>
+      <a href="#cotizar">Cotizador</a>
+      <a href="#demo">Demo gratis</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-pri" href="#cotizar">Cotizar gratis</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <canvas id="lluvia" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="chip sube" style="--d:0ms"><i></i>Te creamos tu página de muestra gratis</span>
+      <h1 aria-label="Primero la ves, después pagas"><span class="w" style="--i:0">Primero</span> <span class="w" style="--i:1">la</span> <span class="w" style="--i:2">ves,</span><br><span class="w" style="--i:3">después</span> <span class="w" style="--i:4">pagas</span><span class="cursor" aria-hidden="true"></span></h1>
+      <p class="lead sube" style="--d:420ms">Te armamos tu página con tu logo, tus fotos y tus servicios, funcionando en computadora y celular. Si te convence, la publicamos. Si no, no pagas nada.</p>
+      <div class="acts sube" style="--d:520ms">
+        <a class="btn btn-pri" href="https://wa.me/50761206962?text=Hola%20Zion%20Web%2C%20quiero%20probar%20mi%20p%C3%A1gina%20gratis." target="_blank" rel="noopener">Prueba tu página gratis</a>
+        <a class="btn btn-sec" href="#cotizar">Cotizar mi página</a>
+      </div>
+      <div class="datos sube" style="--d:620ms">
+        <div><b>Desde $100</b><span>precio claro desde el inicio</span></div>
+        <div><b>5 días</b><span>hábiles con tu información</span></div>
+        <div><b>$0</b><span>por ver tu demo</span></div>
+      </div>
+    </div>
+    <div class="escena" aria-hidden="true">
+      <div class="foto f1" style="--d:200ms"><img src="img/equipo.webp" alt="" width="1200" height="775"></div>
+      <div class="foto f2" style="--d:420ms"><img src="img/hilos.webp" alt="" width="1200" height="659" style="object-position:68% 50%"></div>
+      <div class="flota-ui u1" style="--d:900ms"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><b>Nueva reserva</b><span>Hoy, 3:00 p. m.</span></div></div>
+      <div class="flota-ui u2" style="--d:1050ms"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 18.8z"/></svg></span><div><b>Cotización recibida</b><span>Web de negocio · $250</span></div></div>
+      <div class="flota-ui u3" style="--d:1200ms"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Demo aprobado</b><span>Publicada en 5 días</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cinta" aria-label="Negocios para los que creamos páginas">
+  <div class="cinta-track">
+    <span>Restaurantes</span><span>Salones y spas</span><span>Clínicas</span><span>Tiendas</span><span>Corredores de seguros</span><span>Talleres</span><span>Abogados</span><span>Bienes raíces</span><span>Gimnasios</span><span>Emprendimientos</span>
+    <span aria-hidden="true">Restaurantes</span><span aria-hidden="true">Salones y spas</span><span aria-hidden="true">Clínicas</span><span aria-hidden="true">Tiendas</span><span aria-hidden="true">Corredores de seguros</span><span aria-hidden="true">Talleres</span><span aria-hidden="true">Abogados</span><span aria-hidden="true">Bienes raíces</span><span aria-hidden="true">Gimnasios</span><span aria-hidden="true">Emprendimientos</span>
+  </div>
+</div>
+
+<section id="precios">
+  <div class="wrap">
+    <div class="head" data-r>
+      <h2>Planes y precios</h2>
+      <p class="lead">El precio es la creación de tu página, de una vez. El hosting y el dominio se pagan aparte y los explicamos abajo.</p>
+    </div>
+    <div class="servicios">
+      <article class="serv" data-r style="--d:0ms">
+        <div class="serv-img"><img src="img/teclado.webp" alt="Manos escribiendo en una laptop con íconos digitales" width="1200" height="786" loading="lazy"></div>
+        <div class="serv-body">
+          <h3>Página web</h3>
+          <p>Para presentar tu negocio y que te escriban.</p>
+          <div class="precio"><b>$100</b><span>creación de la página</span></div>
+          <ul class="incl">
+            <li>Una página con tus servicios, fotos, horario y ubicación en el mapa</li>
+            <li>Botón de WhatsApp con el mensaje listo</li>
+            <li>Diseño a la medida que se ve perfecto en computadora, tablet y celular</li>
+            <li>Lista para Google e imagen para compartir tu enlace</li>
+            <li class="app">Aplicación web instalable</li>
+            <li>Dos rondas de cambios sobre tu demo</li>
+          </ul>
+        </div>
+      </article>
+      <article class="serv" data-r style="--d:100ms">
+        <div class="serv-img"><img src="img/espiral.webp" alt="Hombre rodeado de una espiral de luz" width="1200" height="638" loading="lazy"></div>
+        <div class="serv-body">
+          <h3>Web de negocio</h3>
+          <p>Para negocios con varios servicios que mostrar.</p>
+          <div class="precio"><b>$250</b><span>creación de la página</span></div>
+          <ul class="incl">
+            <li class="base">Todo lo de la página web, más:</li>
+            <li>Hasta 5 secciones: inicio, servicios, galería, nosotros y contacto</li>
+            <li>Galería de fotos y formulario de contacto</li>
+            <li class="app">Aplicación web instalable</li>
+            <li>Estadísticas de visitas</li>
+            <li>Tres rondas de cambios sobre tu demo</li>
+          </ul>
+        </div>
+      </article>
+      <article class="serv" data-r style="--d:200ms">
+        <div class="serv-img"><img src="img/flujo.webp" alt="Mano trazando flujos de datos desde un chip" width="1200" height="713" loading="lazy"></div>
+        <div class="serv-body">
+          <h3>Catálogo o tienda</h3>
+          <p>Para vender tus productos en internet.</p>
+          <div class="precio"><b>$290</b><span>creación de la página</span></div>
+          <ul class="incl">
+            <li class="base">Todo lo de la web de negocio, más:</li>
+            <li>Productos con foto, precio y categorías</li>
+            <li>Pedidos que te llegan armados por WhatsApp</li>
+            <li>Panel para cambiar precios y productos tú mismo</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="app-box" data-r>
+      <div class="app-tx">
+        <h3>¿Qué es la aplicación web?</h3>
+        <p>Es tu página convertida en app. Tus clientes la instalan en su celular con tu logo como ícono y la abren como cualquier app, sin pasar por Play Store ni App Store y sin descargas pesadas.</p>
+        <p>Sola ya da presencia. Con una función más, trabaja por ti:</p>
+      </div>
+      <div class="funcs">
+        <div class="func"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><b>Reservas y citas · +$45</b><span>Salones, clínicas y barberías: el cliente escoge día y hora, y tú ves tu agenda.</span></div></div>
+        <div class="func"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6zM9 8a3 3 0 0 1 6 0"/></svg></span><div><b>Menú o catálogo digital · +$40</b><span>Restaurantes y tiendas: el pedido te llega armado por WhatsApp.</span></div></div>
+        <div class="func"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h1M14 11h1M9 15h1M14 15h1"/></svg></span><div><b>Cotizador · +$55</b><span>Servicios y seguros: tu cliente ve su precio al instante, como en Delgado Escalante.</span></div></div>
+      </div>
+    </div>
+
+    <div class="pub-box" data-r>
+      <h3>Hosting y dominio, aparte</h3>
+      <p class="pub-lead">Para estar en internet tu página necesita un dominio (tu dirección, como <b>tunegocio.com</b>) y un hosting (el lugar donde vive). Eliges una opción:</p>
+      <div class="pub-ops">
+        <div class="pub-op"><b>$70 <small>al año</small></b><span>Dominio y hosting por un año</span><p>Pagas una vez y renuevas cada año.</p></div>
+        <div class="pub-op destacada"><b>$18 <small>al mes</small></b><span>Plan mensual</span><p>Incluye dominio, hosting, cambios pequeños como precios, fotos y horarios, y un reporte de visitas.</p></div>
+        <div class="pub-op"><b>$0</b><span>Ya tengo dominio y hosting</span><p>La publicamos en lo que ya tienes.</p></div>
+      </div>
+      <p class="pub-nota">El dominio se registra a tu nombre: la dirección es tuya. Ejemplo: Página web $100 + un año de dominio y hosting $70 = $170 para empezar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cot" id="cotizar">
+  <div class="wrap">
+    <div class="head" data-r>
+      <h2>Cotiza tu página en un minuto</h2>
+      <p class="lead">Cinco preguntas, precio al instante y tu cotización directo a nuestro WhatsApp. Te respondemos con tu demo.</p>
+    </div>
+    <form class="cot-box" id="cot" novalidate data-r>
+      <div class="cot-main">
+        <div class="progreso">
+          <div class="progreso-top"><span id="paso-txt">Paso 1 de 5</span><span id="paso-nom">Tu negocio</span></div>
+          <div class="barra"><i id="barra"></i></div>
+        </div>
+
+        <div class="paso on" data-paso="1">
+          <h3>¿Qué tipo de negocio tienes?</h3>
+          <p>Así te recomendamos las funciones que mejor te sirven.</p>
+          <div class="ops c3">
+            <label class="op rubro"><input type="radio" name="rubro" value="Restaurante o cafetería" data-reco="menu"><span class="em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10M17 3c-2 2-2 6 0 8v10"/></svg></span><span class="op-tx"><b>Restaurante o cafetería</b></span><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></label>
+            <label class="op rubro"><input type="radio" name="rubro" value="Salón, spa o barbería" data-reco="reservas"><span class="em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L20 18M8.5 16.5L20 6"/></svg></span><span class="op-tx"><b>Salón, spa o barbería</b></span><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></label>
+            <label class="op rubro"><input type="radio" name="rubro" value="Tienda o emprendimiento" data-reco="menu,pagos"><span class="em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6zM9 8a3 3 0 0 1 6 0"/></svg></span><span class="op-tx"><b>Tienda o emprendimiento</b></span><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></label>
+            <label class="op rubro"><input type="radio" name="rubro" value="Servicios profesionales" data-reco="cotizador"><span class="em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg></span><span class="op-tx"><b>Servicios profesionales</b></span><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></label>
+            <label class="op rubro"><input type="radio" name="rubro" value="Salud o clínica" data-reco="reservas"><span class="em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z"/></svg></span><span class="op-tx"><b>Salud o clínica</b></span><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></label>
+            <label class="op rubro"><input type="radio" name="rubro" value="Otro tipo de negocio" data-reco=""><span class="em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span><span class="op-tx"><b>Otro</b></span><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="2">
+          <h3>¿Qué proyecto necesitas?</h3>
+          <p>Elige el punto de partida. Luego le sumas funciones.</p>
+          <div class="ops c2">
+            <label class="op"><input type="radio" name="tipo" value="pagina" data-precio="100" data-nombre="Página web"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Página web</b><small>Una página con servicios, fotos, mapa y WhatsApp. Incluye aplicación web</small></span><span class="pr">$100</span></label>
+            <label class="op"><input type="radio" name="tipo" value="landing" data-precio="140" data-nombre="Página de ventas"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Página de ventas</b><small>Para una promoción, un producto o una campaña</small></span><span class="pr">$140</span></label>
+            <label class="op"><input type="radio" name="tipo" value="web" data-precio="250" data-nombre="Web de negocio"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Web de negocio</b><small>Hasta 5 secciones, galería y formulario. Incluye aplicación web</small></span><span class="pr">$250</span></label>
+            <label class="op"><input type="radio" name="tipo" value="tienda" data-precio="290" data-nombre="Catálogo o tienda"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Catálogo o tienda</b><small>Productos con precio, pedidos por WhatsApp y panel. Incluye aplicación web</small></span><span class="pr">$290</span></label>
+            <label class="op"><input type="radio" name="tipo" value="mejora" data-precio="120" data-nombre="Mejorar mi página actual"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Mejorar mi página actual</b><small>Rediseño, velocidad y ajustes para Google</small></span><span class="pr">desde $120</span></label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="3">
+          <h3>¿Qué funciones quieres?</h3>
+          <p>Opcional. Marcamos en verde las que más usan negocios como el tuyo.</p>
+          <div class="ops c2">
+            <label class="op check" data-key="menu"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="40" data-nombre="Menú o catálogo digital"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Menú o catálogo digital</b><small>Productos o platos con foto y precio</small></span><span class="pr">+$40</span></label>
+            <label class="op check" data-key="reservas"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="45" data-nombre="Reservas y citas"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Reservas y citas</b><small>Tus clientes eligen día y hora</small></span><span class="pr">+$45</span></label>
+            <label class="op check" data-key="cotizador"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="55" data-nombre="Cotizador o calculadora"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Cotizador o calculadora</b><small>Como este, con tus precios</small></span><span class="pr">+$55</span></label>
+            <label class="op check" data-key="pagos"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="80" data-nombre="Pagos en línea"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Pagos en línea</b><small>Con Yappy, PayPal o tarjeta, usando tu cuenta de comercio</small></span><span class="pr">+$80</span></label>
+            <label class="op check" data-key="idioma"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="40" data-nombre="Español e inglés"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Español e inglés</b><small>Botón para cambiar de idioma</small></span><span class="pr">+$40</span></label>
+            <label class="op check" data-key="logo"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="55" data-nombre="Logo profesional"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Logo profesional</b><small>Tres propuestas y todos los formatos</small></span><span class="pr">+$55</span></label>
+            <label class="op check" data-key="textos"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="30" data-nombre="Textos escritos por nosotros"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Textos escritos por nosotros</b><small>Redactados para vender y para Google</small></span><span class="pr">+$30</span></label>
+            <label class="op check" data-key="fotos"><span class="reco">Recomendado</span><input type="checkbox" name="extra" data-precio="35" data-nombre="Imágenes profesionales"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Imágenes profesionales</b><small>Selección y edición de fotos para tu marca</small></span><span class="pr">+$35</span></label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="4">
+          <h3>¿Cómo la publicamos?</h3>
+          <p>Esto se paga aparte de la creación. Tu página necesita una dirección (dominio) y un lugar en internet (hosting).</p>
+          <div class="ops">
+            <label class="op"><input type="radio" name="pub" value="anual" data-precio="70" data-nombre="Dominio y hosting por un año" checked><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Dominio y hosting por un año</b><small>Tu dirección .com y la página en línea los 12 meses</small></span><span class="pr">$70</span></label>
+            <label class="op"><input type="radio" name="pub" value="mensual" data-mensual="18" data-nombre="Plan mensual"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Plan mensual</b><small>Dominio, hosting, cambios pequeños y reporte de visitas</small></span><span class="pr">$18/mes</span></label>
+            <label class="op"><input type="radio" name="pub" value="propio" data-precio="0" data-nombre="Ya tengo dominio y hosting"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Ya tengo dominio y hosting</b><small>La publicamos en lo que ya tienes</small></span><span class="pr">$0</span></label>
+          </div>
+          <div class="subt">Entrega</div>
+          <div class="ops c2">
+            <label class="op"><input type="radio" name="entrega" value="normal" data-precio="0" data-nombre="5 días hábiles" checked><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Normal</b><small>5 días hábiles</small></span><span class="pr">$0</span></label>
+            <label class="op"><input type="radio" name="entrega" value="express" data-precio="35" data-nombre="Express en 72 horas"><span class="tic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span class="op-tx"><b>Express</b><small>72 horas, si nos envías todo tu material el primer día</small></span><span class="pr">+$35</span></label>
+          </div>
+        </div>
+
+        <div class="paso" data-paso="5">
+          <h3>Último paso: ¿a nombre de quién?</h3>
+          <p>Con esto preparamos tu demo. Revisa el total y envíanos tu cotización.</p>
+          <div class="campos">
+            <label for="c-nombre">Tu nombre<input id="c-nombre" name="nombre" autocomplete="name" placeholder="Ej. María Pérez"></label>
+            <label for="c-negocio">Nombre de tu negocio<input id="c-negocio" name="negocio" autocomplete="organization" placeholder="Ej. Café La Esquina"></label>
+          </div>
+          <a class="btn btn-wa" id="enviar" href="https://wa.me/50761206962" target="_blank" rel="noopener" style="margin-top:22px;width:100%">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+            Enviar cotización por WhatsApp
+          </a>
+        </div>
+
+        <div class="cot-nav">
+          <button type="button" class="btn btn-sec" id="atras" disabled>Atrás</button>
+          <button type="button" class="btn btn-pri" id="sigue" disabled>Continuar</button>
+        </div>
+      </div>
+
+      <aside class="cot-side" aria-live="polite">
+        <h4>Tu cotización</h4>
+        <ul class="lineas" id="lineas"><li class="vacio">Elige tu negocio para empezar.</li></ul>
+        <div class="total">
+          <span>Inversión inicial</span>
+          <b id="total">$0</b>
+          <small id="mensual"></small>
+        </div>
+        <p class="nota">Precios en dólares, de referencia. Confirmamos el precio final contigo al mostrarte tu demo.</p>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap demo">
+    <div class="demo-img" data-clip><img src="img/teclado.webp" alt="Persona trabajando en una laptop" width="1200" height="786" loading="lazy"></div>
+    <div>
+      <div class="head" data-r style="margin-bottom:20px">
+        <h2>Así funciona tu demo gratis</h2>
+        <p class="lead">Tres pasos, sin pagar nada por adelantado.</p>
+      </div>
+      <ol class="pasos">
+        <li data-r style="--d:0ms"><span class="n">1</span><div><b>Nos escribes por WhatsApp</b><p>Con el nombre de tu negocio y tu Instagram o tus fotos.</p></div></li>
+        <li data-r style="--d:100ms"><span class="n">2</span><div><b>Armamos tu demo</b><p>Con tu logo, tus colores y tus servicios, funcionando en computadora y celular.</p></div></li>
+        <li data-r style="--d:200ms"><span class="n">3</span><div><b>Decides</b><p>Si te gusta, la terminamos y la publicamos con tu dominio. Si no, no pagas.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos" style="padding-top:0">
+  <div class="wrap">
+    <div class="head" data-r>
+      <h2>Trabajos reales</h2>
+      <p class="lead">Páginas publicadas y funcionando. Ábrelas en tu computadora o en tu celular.</p>
+    </div>
+    <div class="trabajos">
+      <a class="caso" data-r href="https://segurosdelgadoescalante.com" target="_blank" rel="noopener">
+        <div class="nav-mock"><i></i><i></i><i></i><span>segurosdelgadoescalante.com</span></div>
+        <div class="shot"><img src="img/cap-delgado.webp" alt="Inicio de la página de Delgado Escalante con foto familiar y cotizador por chat" width="1200" height="750" loading="lazy"></div>
+        <div class="caso-tx"><h3>Delgado Escalante</h3><p>Corredora de seguros. Cotizador de varias aseguradoras, guías por producto y app instalable.</p><em>Ver página</em></div>
+      </a>
+      <a class="caso" data-r style="--d:100ms" href="https://sutilbyclara.vercel.app" target="_blank" rel="noopener">
+        <div class="nav-mock"><i></i><i></i><i></i><span>sutilbyclara.vercel.app</span></div>
+        <div class="shot"><img src="img/cap-sutil.webp" alt="Inicio de la página de Sutil Estudio by Clara con ilustración floral" width="1200" height="750" loading="lazy"></div>
+        <div class="caso-tx"><h3>Sutil by Clara</h3><p>Estudio de belleza en Colón. Servicios y reservas directo por WhatsApp.</p><em>Ver página</em></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" style="padding-top:0">
+  <div class="wrap">
+    <div class="head" data-r><h2>Preguntas frecuentes</h2></div>
+    <div class="faq-in" data-r>
+      <details><summary>¿El demo de verdad es gratis?<span class="mas" aria-hidden="true"></span></summary><p>Sí. Te mostramos tu página funcionando, con tu logo, tus fotos y tus servicios. Si no te convence, no pagas nada.</p></details>
+      <details><summary>¿Cuánto tarda mi página?<span class="mas" aria-hidden="true"></span></summary><p>Cinco días hábiles desde que recibimos tu logo, fotos, textos y precios. Con entrega express, 72 horas.</p></details>
+      <details><summary>¿Puedo pedir cambios?<span class="mas" aria-hidden="true"></span></summary><p>Sí. Ajustamos el demo contigo antes de publicar. Después, el plan mensual incluye los cambios pequeños, como precios, fotos y horarios.</p></details>
+      <details><summary>¿Los $100 incluyen el dominio y el hosting?<span class="mas" aria-hidden="true"></span></summary><p>No. Los $100 son la creación de tu página. Para publicarla eliges dominio y hosting por un año ($70), el plan mensual ($18 al mes) o, si ya los tienes, $0.</p></details>
+      <details><summary>¿Qué pasa después del primer año?<span class="mas" aria-hidden="true"></span></summary><p>Renuevas el dominio y el hosting, o pasas al plan mensual, que ya los incluye.</p></details>
+      <details><summary>¿Cómo pago?<span class="mas" aria-hidden="true"></span></summary><p>Pagas cuando apruebas tu demo. Te enviamos las formas de pago por WhatsApp al confirmar.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <div class="wrap">
+    <div class="cierre-box" data-clip>
+      <img src="img/ondas.webp" alt="" width="1200" height="780" loading="lazy">
+      <div class="cierre-tx">
+        <h2>¿Listo para ver tu página?</h2>
+        <p class="lead">Escríbenos DEMO por WhatsApp y empezamos hoy.</p>
+        <a class="btn btn-wa" style="align-self:flex-start" href="https://wa.me/50761206962?text=DEMO%3A%20Hola%20Zion%20Web%2C%20quiero%20ver%20mi%20p%C3%A1gina." target="_blank" rel="noopener">Escribir DEMO por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a class="brand" href="#inicio" aria-label="Zion Web, inicio">
+        <span class="logo" aria-hidden="true"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span>
+      </a>
+      <p>Páginas web y aplicaciones a la medida. Panamá.</p>
+    </div>
+    <div class="contacto">
+      <p>WhatsApp</p>
+      <b>+507 6120-6962</b>
+      <p>© 2026 Zion Web</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flota" href="https://wa.me/50761206962?text=Hola%20Zion%20Web%2C%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Navegación: línea inferior al bajar */
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8)},{passive:true});
+
+  /* Revelados: se activan solo con JavaScript y siempre terminan visibles */
+  var revs=document.querySelectorAll('[data-r],[data-clip]');
+  if('IntersectionObserver' in window && !reduce){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    revs.forEach(function(el){io.observe(el)});
+    setTimeout(function(){revs.forEach(function(el){el.classList.add('in')})},4000);
+  }
+
+  /* Cotizador por pasos */
+  var form=document.getElementById('cot'), pasos=[].slice.call(form.querySelectorAll('.paso')), n=1, N=pasos.length;
+  var nombres=['Tu negocio','Tu proyecto','Funciones','Publicación','Tus datos'];
+  var atras=document.getElementById('atras'), sigue=document.getElementById('sigue'), barra=document.getElementById('barra');
+  var lineas=document.getElementById('lineas'), totalEl=document.getElementById('total'), mensualEl=document.getElementById('mensual'), enviar=document.getElementById('enviar');
+  var WA='50761206962', mostrado=0, anim=0;
+  function money(v){return '$'+Math.round(v).toLocaleString('en-US')}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function contar(dest,pref){
+    cancelAnimationFrame(anim);
+    if(reduce){mostrado=dest;totalEl.textContent=pref+money(dest);return}
+    var ini=mostrado, t0=performance.now(), dur=450;
+    (function f(t){var k=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-k,3);mostrado=ini+(dest-ini)*e;totalEl.textContent=pref+money(mostrado);if(k<1)anim=requestAnimationFrame(f)})(t0);
+  }
+  function valido(p){
+    if(p===1) return !!form.querySelector('input[name=rubro]:checked');
+    if(p===2) return !!form.querySelector('input[name=tipo]:checked');
+    return true;
+  }
+  function ir(p,dir){
+    pasos[n-1].classList.remove('on','atras');
+    n=p; var el=pasos[n-1]; el.classList.add('on'); if(dir<0) el.classList.add('atras');
+    document.getElementById('paso-txt').textContent='Paso '+n+' de '+N;
+    document.getElementById('paso-nom').textContent=nombres[n-1];
+    barra.style.width=(n/N*100)+'%';
+    atras.disabled=n===1;
+    sigue.style.display=n===N?'none':'';
+    sigue.disabled=!valido(n);
+    var top=form.getBoundingClientRect().top; if(top<0||top>innerHeight*.5) form.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+  }
+  atras.addEventListener('click',function(){if(n>1)ir(n-1,-1)});
+  sigue.addEventListener('click',function(){if(n<N&&valido(n))ir(n+1,1)});
+
+  function recomendar(){
+    var r=form.querySelector('input[name=rubro]:checked'), keys=r?r.dataset.reco.split(','):[];
+    form.querySelectorAll('[data-key]').forEach(function(l){l.classList.toggle('recomendado',keys.indexOf(l.dataset.key)>-1)});
+  }
+  function calc(){
+    var items=[], total=0, mensual=0, pref='';
+    var rubro=form.querySelector('input[name=rubro]:checked');
+    var tipo=form.querySelector('input[name=tipo]:checked');
+    if(rubro) items.push(['Negocio',rubro.value,1]);
+    if(tipo){var p=+tipo.dataset.precio;total+=p;pref=tipo.value==='mejora'?'desde ':'';items.push([tipo.dataset.nombre,pref+money(p)])}
+    form.querySelectorAll('input[name=extra]:checked').forEach(function(x){var v=+x.dataset.precio;total+=v;items.push([x.dataset.nombre,'+'+money(v)])});
+    if(tipo){
+      var pub=form.querySelector('input[name=pub]:checked');
+      if(pub.dataset.mensual){mensual=+pub.dataset.mensual;items.push([pub.dataset.nombre,money(mensual)+'/mes'])}
+      else{var pv=+pub.dataset.precio;total+=pv;items.push([pub.dataset.nombre,money(pv)])}
+      var ent=form.querySelector('input[name=entrega]:checked'),ev=+ent.dataset.precio;total+=ev;items.push(['Entrega: '+ent.dataset.nombre,ev?'+'+money(ev):'incluida']);
+    }
+    lineas.innerHTML=items.length?items.map(function(i){return '<li><span>'+esc(i[0])+'</span><span'+(i[2]?' class="t"':'')+'>'+esc(i[1])+'</span></li>'}).join(''):'<li class="vacio">Elige tu negocio para empezar.</li>';
+    contar(total,pref);
+    mensualEl.textContent=mensual?('+ '+money(mensual)+' al mes'):'';
+    var nom=document.getElementById('c-nombre').value.trim(), neg=document.getElementById('c-negocio').value.trim();
+    var msg='Hola Zion Web, quiero cotizar mi página:\n'+items.map(function(i){return '- '+i[0]+': '+i[1]}).join('\n')+'\nInversión inicial: '+pref+money(total)+(mensual?(' + '+money(mensual)+' al mes'):'')+(nom?('\nNombre: '+nom):'')+(neg?('\nNegocio: '+neg):'')+'\nQuiero ver mi demo gratis.';
+    enviar.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+    sigue.disabled=!valido(n);
+  }
+  form.addEventListener('change',function(e){
+    if(e.target.name==='rubro'){recomendar();setTimeout(function(){if(n===1)ir(2,1)},280)}
+    else if(e.target.name==='tipo'){setTimeout(function(){if(n===2)ir(3,1)},280)}
+    calc();
+  });
+  form.addEventListener('input',calc);
+  form.addEventListener('submit',function(e){e.preventDefault()});
+  calc();
+
+  /* Lluvia de código, suave sobre fondo claro */
+  var cv=document.getElementById('lluvia'); if(!cv||!cv.getContext) return;
+  var ctx=cv.getContext('2d'), chars='アイウエオカキクケコサシスセソ0123456789ZIONWEB', fs=16, cols=[], w=0, h=0, visible=true, last=0;
+  function size(){var r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;cv.width=w*d;cv.height=h*d;ctx.setTransform(d,0,0,d,0,0);cols=[];for(var i=0;i<Math.ceil(w/fs);i++)cols.push(Math.random()*-h/fs)}
+  function frame(){
+    ctx.fillStyle='rgba(245,249,246,0.12)';ctx.fillRect(0,0,w,h);ctx.font='500 '+fs+'px "JetBrains Mono", monospace';
+    for(var i=0;i<cols.length;i++){if(i%2)continue;var x=i*fs,y=cols[i]*fs;ctx.fillStyle=Math.random()>.9?'rgba(4,92,48,.95)':'rgba(6,110,58,.5)';ctx.fillText(chars.charAt(Math.floor(Math.random()*chars.length)),x,y);cols[i]=(y>h&&Math.random()>.97)?0:cols[i]+1}
+  }
+  size(); addEventListener('resize',size);
+  if(reduce) return;
+  if('IntersectionObserver' in window) new IntersectionObserver(function(e){visible=e[0].isIntersecting}).observe(cv);
+  (function loop(t){requestAnimationFrame(loop);if(!visible||t-last<70)return;last=t;frame()})(0);
+})();
+</script>
+
+</body>
+</html>
