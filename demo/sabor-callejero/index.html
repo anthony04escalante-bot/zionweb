@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sabor Callejero | Página de muestra por Zion Web</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Página de muestra creada por Zion Web. No publicada.">
+<meta name="theme-color" content="#FFC72C">
+<meta property="og:title" content="Sabor Callejero: tu página de muestra">
+<meta property="og:description" content="Mírala en tu celular: menú, pedidos por WhatsApp y más. Creada por Zion Web.">
+<meta property="og:image" content="https://zionwebpa.com/demo/sabor-callejero/img/hero.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FFC72C'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' font-family='Arial Black'%3ESC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Figtree:wght@400;600;700&display=swap">
+<style>
+/* Muestra para restaurante de comida rápida. Amarillo mostaza de rótulo, tinta negra y rojo kétchup solo en precios y acciones. */
+:root{
+  --mostaza:#FFC72C; --crema:#FFF6DC; --blanco:#FFFFFF; --tinta:#1A1410; --gris:#5E5248; --linea:#EADFC8; --rojo:#D7261E;
+  --zion:#0B1A12; --fos:#3DFF8A;
+  --f-d:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif; --f-b:"Figtree",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1); --sombra:0 1px 2px rgba(26,20,16,.08),0 14px 30px -14px rgba(26,20,16,.28);
+  --barra:52px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--barra) + 130px)}
+body{margin:0;background:var(--blanco);color:var(--tinta);font:400 1rem/1.55 var(--f-b);overflow-x:hidden;padding-top:var(--barra)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--rojo);outline-offset:3px;border-radius:10px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+@media(min-width:720px){.wrap{padding-inline:32px}}
+h1,h2,h3{font-family:var(--f-d);margin:0;letter-spacing:-.01em;text-wrap:balance}
+
+/* Barra de muestra (Zion Web) */
+.demo-bar{position:fixed;inset:0 0 auto;z-index:60;height:calc(var(--barra) + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);background:var(--zion);color:#EAF5EE;display:flex;align-items:center}
+.demo-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%}
+.demo-bar p{margin:0;font-size:.8125rem;line-height:1.25;display:flex;align-items:center;gap:8px}
+.demo-bar p i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--fos);box-shadow:0 0 0 4px rgba(61,255,138,.22)}
+.demo-bar b{font-weight:700;color:#fff}
+.demo-bar a{flex:none;display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:10px;background:var(--fos);color:var(--zion);font-weight:700;font-size:.8125rem;text-decoration:none;transition:transform 160ms var(--ease)}
+.demo-bar a:active{transform:scale(.97)}
+@media(max-width:520px){.demo-bar .largo{display:none}}
+
+/* Encabezado */
+.top{position:sticky;top:var(--barra);z-index:40;background:var(--mostaza);border-bottom:2px solid var(--tinta)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca span{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--tinta);color:var(--mostaza);font:800 1.05rem var(--f-d)}
+.marca b{font:800 1.45rem/1 var(--f-d);font-stretch:75%;text-transform:uppercase;letter-spacing:.01em}
+.top nav{display:none;gap:24px;font-weight:700}
+.top nav a{text-decoration:none}
+@media(min-width:860px){.top nav{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:14px;border:0;font-weight:700;text-decoration:none;transition:transform 160ms var(--ease),background-color 200ms ease}
+.btn:active{transform:scale(.97)}
+.btn-negro{background:var(--tinta);color:var(--mostaza)}
+.btn-blanco{background:var(--blanco);color:var(--tinta);box-shadow:inset 0 0 0 2px var(--tinta)}
+.btn-rojo{background:var(--rojo);color:#fff}
+
+/* Portada */
+.hero{background:var(--mostaza);padding-block:28px 56px;overflow:hidden}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr;gap:48px}}
+.hero h1{font-size:clamp(2.9rem,8vw,5.6rem);line-height:.88;font-weight:800;font-stretch:75%;text-transform:uppercase;animation:sube 700ms var(--ease) both}
+.hero p{font-size:1.125rem;max-width:44ch;margin:18px 0 0;animation:sube 700ms var(--ease) 90ms both}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;animation:sube 700ms var(--ease) 150ms both}
+.chips span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.65);font-weight:600;font-size:.875rem}
+.chips .abierto::before{content:"";width:8px;height:8px;border-radius:50%;background:#1E9E4A}
+.hero .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;animation:sube 700ms var(--ease) 210ms both}
+.hero-foto{position:relative;animation:entraFoto 900ms var(--ease) 120ms both}
+.hero-foto .ph{border-radius:28px;border:3px solid var(--tinta);aspect-ratio:14/9;box-shadow:10px 10px 0 var(--tinta)}
+.sello{position:absolute;right:-6px;top:-14px;width:118px;height:118px;border-radius:50%;background:var(--rojo);color:#fff;display:grid;place-items:center;text-align:center;font:800 1rem/1.05 var(--f-d);transform:rotate(10deg);border:3px solid var(--tinta);animation:sello 900ms var(--ease) 600ms both}
+.sello b{display:block;font-size:1.65rem}
+@keyframes sube{from{opacity:0;transform:translateY(14px)}}
+@keyframes entraFoto{from{opacity:0;transform:translateY(20px) rotate(-2deg)}}
+@keyframes sello{from{opacity:0;transform:rotate(-20deg) scale(.6)}}
+
+/* Fotos con marca de agua de muestra */
+.ph{position:relative;overflow:hidden;background:var(--linea)}
+.ph img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none;pointer-events:none}
+.ph::after{content:"MUESTRA · ZION WEB";position:absolute;inset:auto 0 50%;transform:translateY(50%) rotate(-14deg);text-align:center;font:800 clamp(.8rem,2.4vw,1.15rem)/1 var(--f-b);letter-spacing:.3em;color:rgba(255,255,255,.55);text-shadow:0 1px 3px rgba(0,0,0,.35);pointer-events:none}
+
+/* Menú */
+.menu{padding-block:48px 24px}
+.menu h2,.combos h2,.info h2{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:800;font-stretch:75%;text-transform:uppercase;line-height:.95}
+.tabs{position:sticky;top:calc(var(--barra) + 64px);z-index:30;background:var(--blanco);margin-top:18px;padding-block:10px;border-bottom:1px solid var(--linea)}
+.tabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:9px 16px;border-radius:999px;border:2px solid var(--tinta);background:var(--blanco);font-weight:700;font-size:.9375rem;transition:background-color 180ms ease,color 180ms ease,transform 160ms var(--ease)}
+.tab:active{transform:scale(.96)}
+.tab[aria-current="true"]{background:var(--tinta);color:var(--mostaza)}
+.cat{padding-top:28px}
+.cat h3{font-size:1.6rem;font-weight:800;margin-bottom:14px}
+.platos{display:grid;gap:14px}
+@media(min-width:640px){.platos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.platos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.plato{display:flex;flex-direction:column;border-radius:20px;background:var(--blanco);border:2px solid var(--linea);overflow:hidden;transition:border-color 200ms ease,transform 300ms var(--ease)}
+@media(hover:hover){.plato:hover{border-color:var(--tinta);transform:translateY(-3px)}}
+.plato .ph{aspect-ratio:4/3}
+.plato-tx{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.plato-tx b{font:800 1.2rem/1.15 var(--f-d)}
+.plato-tx p{margin:0;color:var(--gris);font-size:.9375rem}
+.plato-pie{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px}
+.precio{font:800 1.35rem var(--f-d);color:var(--rojo)}
+.agregar{min-height:42px;padding:0 16px;border-radius:12px;border:0;background:var(--tinta);color:var(--mostaza);font-weight:700;transition:transform 160ms var(--ease)}
+.agregar:active{transform:scale(.95)}
+.cant{display:none;align-items:center;gap:4px;border-radius:12px;background:var(--crema);padding:3px}
+.cant button{width:36px;height:36px;border-radius:10px;border:0;background:var(--blanco);font-weight:800;font-size:1.1rem;transition:transform 140ms var(--ease)}
+.cant button:active{transform:scale(.9)}
+.cant span{min-width:24px;text-align:center;font-weight:800}
+.plato.en .agregar{display:none}.plato.en .cant{display:flex}
+.lista{border-radius:20px;border:2px solid var(--linea);overflow:hidden}
+.fila{display:flex;align-items:center;gap:12px;padding:14px 16px;border-top:1px solid var(--linea)}
+.fila:first-child{border-top:0}
+.fila div{flex:1}.fila b{display:block}.fila small{color:var(--gris)}
+
+/* Combos */
+.combos{padding-block:48px;background:var(--crema);margin-top:40px}
+.combo-grid{display:grid;gap:16px;margin-top:22px}
+@media(min-width:800px){.combo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.combo{border-radius:22px;background:var(--blanco);border:2px solid var(--tinta);padding:20px;display:flex;flex-direction:column;gap:8px;box-shadow:6px 6px 0 var(--tinta)}
+.combo b{font:800 1.4rem/1.1 var(--f-d)}
+.combo p{margin:0;color:var(--gris)}
+.combo .plato-pie{padding-top:14px}
+
+/* Información */
+.info{padding-block:52px}
+.info-grid{display:grid;gap:16px;margin-top:22px}
+@media(min-width:800px){.info-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{border-radius:20px;border:2px solid var(--linea);padding:20px}
+.card h3{font-size:1.25rem;font-weight:800;margin-bottom:8px}
+.card p,.card li{color:var(--gris);font-size:.9375rem}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.card li{display:flex;justify-content:space-between;gap:10px}
+.mapa{margin-top:12px;height:120px;border-radius:14px;background:repeating-linear-gradient(45deg,#F2EAD7 0 12px,#EADFC8 12px 24px);display:grid;place-items:center;color:var(--gris);font-weight:700;font-size:.875rem}
+
+footer{background:var(--tinta);color:#D8CFC4;padding-block:36px calc(110px + env(safe-area-inset-bottom,0px));font-size:.875rem}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+footer b{color:var(--mostaza)}
+footer details summary{cursor:pointer}
+footer details p{margin:8px 0 0;font-size:.8125rem;opacity:.8}
+
+/* Carrito */
+.carrito{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:50;width:min(560px,calc(100% - 24px));transform:translate(-50%,140%);transition:transform 380ms var(--ease)}
+.carrito.on{transform:translate(-50%,0)}
+.carrito button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:0 20px;border-radius:18px;border:0;background:var(--rojo);color:#fff;font-weight:700;font-size:1.0625rem;box-shadow:0 16px 34px -14px rgba(215,38,30,.7);transition:transform 160ms var(--ease)}
+.carrito button:active{transform:scale(.98)}
+.carrito .n{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 6px;border-radius:99px;background:#fff;color:var(--rojo);font-weight:800;margin-right:8px}
+.carrito .n.pulso{animation:pulso 300ms var(--ease)}
+@keyframes pulso{50%{transform:scale(1.25)}}
+
+/* Panel del pedido y modal */
+.velo{position:fixed;inset:0;z-index:70;background:rgba(26,20,16,.5);opacity:0;pointer-events:none;transition:opacity 260ms ease}
+.velo.on{opacity:1;pointer-events:auto}
+.panel{position:fixed;z-index:80;left:0;right:0;bottom:0;max-height:88vh;overflow:auto;background:var(--blanco);border-radius:24px 24px 0 0;padding:20px 20px calc(24px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform 420ms var(--ease)}
+.panel.on{transform:none}
+@media(min-width:760px){.panel{left:auto;right:16px;bottom:16px;top:calc(var(--barra) + 16px);width:420px;max-height:none;border-radius:24px;transform:translateX(110%)}}
+.panel h3{font-size:1.6rem;font-weight:800}
+.cerrar{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:12px;border:0;background:var(--crema);font-size:1.3rem;line-height:1}
+.items{list-style:none;margin:14px 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.items li{display:flex;justify-content:space-between;gap:10px;padding-bottom:8px;border-bottom:1px dashed var(--linea)}
+.total{display:flex;justify-content:space-between;font:800 1.35rem var(--f-d);margin:6px 0 16px}
+.campo{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;font-weight:700;font-size:.9375rem}
+.campo input,.campo textarea{border:2px solid var(--linea);border-radius:12px;padding:12px;font:400 1rem var(--f-b);background:var(--blanco);color:var(--tinta)}
+.campo input:focus,.campo textarea:focus{outline:none;border-color:var(--tinta)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;border-radius:14px;background:var(--crema);margin-bottom:12px}
+.seg button{min-height:42px;border:0;border-radius:10px;background:transparent;font-weight:700;transition:background-color 180ms ease}
+.seg button[aria-pressed="true"]{background:var(--blanco);box-shadow:var(--sombra)}
+.modal{position:fixed;z-index:90;left:50%;top:50%;width:min(440px,calc(100% - 24px));max-height:86vh;overflow:auto;background:var(--blanco);border-radius:24px;padding:22px;transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;transition:transform 320ms var(--ease),opacity 220ms ease}
+.modal.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}
+.modal h3{font-size:1.45rem;font-weight:800;padding-right:40px}
+.chat{margin:14px 0;padding:14px;border-radius:16px;background:#E7DED3}
+.burbuja{background:#DCF8C6;border-radius:12px 12px 2px 12px;padding:10px 12px;font-size:.875rem;white-space:pre-line;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.aviso{font-size:.875rem;color:var(--gris);margin:0 0 14px}
+.btn-zion{background:var(--zion);color:var(--fos);width:100%}
+
+/* Muestra vencida */
+.vencida{position:fixed;inset:0;z-index:100;background:var(--zion);color:#EAF5EE;display:none;place-items:center;text-align:center;padding:24px}
+.vencida.on{display:grid}
+.vencida h2{font:800 2rem/1.1 var(--f-d);margin-bottom:10px}
+.vencida p{margin:0 auto 20px;max-width:36ch;color:#B5CCBE}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar" role="note">
+  <div class="wrap">
+    <p><i></i><span><b>Página de muestra</b><span class="largo"> creada por Zion Web. Aún no está publicada</span>. Vence el 23 de octubre.</span></p>
+    <a id="quiero-top" href="#" target="_blank" rel="noopener">Quiero esta página</a>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#inicio"><span>SC</span><b>Sabor Callejero</b></a>
+    <nav aria-label="Secciones"><a href="#menu">Menú</a><a href="#combos">Combos</a><a href="#info">Horario y ubicación</a></nav>
+    <a class="btn btn-negro" href="#menu" style="min-height:42px">Pedir ahora</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Hamburguesas, shawarmas y pizza al momento</h1>
+      <p>Hechas al pedido, calientitas y listas para llevar o a domicilio. Arma tu pedido aquí y te llega por WhatsApp.</p>
+      <div class="chips"><span class="abierto">Abierto hoy, 11:00 a. m. a 11:00 p. m.</span><span>Delivery y para llevar</span><span>Yappy, efectivo y tarjeta</span></div>
+      <div class="acts"><a class="btn btn-negro" href="#menu">Ver el menú</a><a class="btn btn-blanco" href="#combos">Combos del día</a></div>
+    </div>
+    <div class="hero-foto">
+      <div class="ph"><img src="/demo/sabor-callejero/img/hero.webp" alt="Hamburguesa con papas fritas" width="1400" height="900"></div>
+      <div class="sello"><span>Combo<b>$7.99</b>con soda</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu" aria-labelledby="t-menu">
+  <div class="wrap"><h2 id="t-menu">Nuestro menú</h2></div>
+  <div class="tabs"><div class="wrap" role="tablist" id="tabs"></div></div>
+  <div class="wrap" id="cats"></div>
+</section>
+
+<section class="combos" id="combos" aria-labelledby="t-combos">
+  <div class="wrap">
+    <h2 id="t-combos">Combos que rinden</h2>
+    <div class="combo-grid" id="combo-grid"></div>
+  </div>
+</section>
+
+<section class="info" id="info" aria-labelledby="t-info">
+  <div class="wrap">
+    <h2 id="t-info">Horario y ubicación</h2>
+    <div class="info-grid">
+      <div class="card"><h3>Horario</h3><ul><li><span>Lunes a jueves</span><span>11:00 a. m. a 10:00 p. m.</span></li><li><span>Viernes y sábado</span><span>11:00 a. m. a 12:00 a. m.</span></li><li><span>Domingo</span><span>12:00 m. d. a 10:00 p. m.</span></li></ul></div>
+      <div class="card"><h3>Dónde estamos</h3><p>Aquí va la dirección de tu local y el botón para abrir Google Maps.</p><div class="mapa">Mapa de tu local</div></div>
+      <div class="card"><h3>Delivery</h3><p>Aquí van tus zonas de entrega, el costo y el tiempo estimado. También las formas de pago: Yappy, efectivo o tarjeta.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Sabor Callejero</b>: página de muestra creada por Zion Web. Los nombres, precios y horarios son de ejemplo y se cambian por los tuyos.</span>
+    <details><summary>Créditos de las fotos de ejemplo</summary><p>Fotos de referencia de Wikimedia Commons: Kurtkaiser (CC0), Renee Comet (dominio público), jeffreyw (CC BY 2.0), David Pursehouse (CC BY 2.0), Siqbal (CC BY-SA 3.0), Vyacheslav Argenberg (CC BY 4.0), BullDawg2021 (CC BY 4.0), Elsie Hui (CC BY 2.0), Tony Webster (CC BY-SA 2.0), David Goehring (CC BY 2.0). En la versión final van las fotos de tus platos.</p></details>
+  </div>
+</footer>
+
+<div class="carrito" id="carrito"><button type="button" id="ver-pedido"><span><span class="n" id="n">0</span>Ver mi pedido</span><span id="total-bar">$0.00</span></button></div>
+
+<div class="velo" id="velo"></div>
+<aside class="panel" id="panel" aria-label="Tu pedido" aria-hidden="true">
+  <button class="cerrar" type="button" data-cerrar aria-label="Cerrar">×</button>
+  <h3>Tu pedido</h3>
+  <ul class="items" id="items"></ul>
+  <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+  <div class="seg" role="group" aria-label="Entrega"><button type="button" aria-pressed="true" data-ent="Delivery">Delivery</button><button type="button" aria-pressed="false" data-ent="Para llevar">Para llevar</button></div>
+  <label class="campo">Tu nombre<input id="nom" autocomplete="name" placeholder="Ej. Carlos"></label>
+  <label class="campo" id="campo-dir">Dirección de entrega<input id="dir" autocomplete="street-address" placeholder="Barrio, calle, casa o edificio"></label>
+  <label class="campo">Nota para la cocina<textarea id="nota" rows="2" placeholder="Ej. sin cebolla"></textarea></label>
+  <button class="btn btn-rojo" type="button" id="enviar" style="width:100%">Enviar pedido por WhatsApp</button>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-t" aria-hidden="true">
+  <button class="cerrar" type="button" data-cerrar aria-label="Cerrar">×</button>
+  <h3 id="m-t">Así le llegaría este pedido a tu WhatsApp</h3>
+  <div class="chat"><div class="burbuja" id="burbuja"></div></div>
+  <p class="aviso">Esto es una muestra, así que el pedido no se envía. En tu página real llega directo al WhatsApp de tu restaurante, listo para preparar.</p>
+  <a class="btn btn-zion" id="quiero-modal" href="#" target="_blank" rel="noopener">Quiero esta página para mi negocio</a>
+</div>
+
+<div class="vencida" id="vencida"><div><h2>Esta muestra ya venció</h2><p>Escríbenos y la activamos de nuevo, o la publicamos con tu dominio.</p><a class="btn btn-zion" id="quiero-vencida" href="#" style="width:auto;padding:0 24px">Escribir a Zion Web</a></div></div>
+
+<script>
+(function(){
+  var ZION='50761206962', NEGOCIO='Sabor Callejero', VENCE=new Date('2026-10-24T00:00:00-05:00');
+  var quiero='https://wa.me/'+ZION+'?text='+encodeURIComponent('Hola Zion Web, vi la página de muestra de '+NEGOCIO+' y la quiero para mi negocio.');
+  ['quiero-top','quiero-modal','quiero-vencida'].forEach(function(id){document.getElementById(id).href=quiero});
+  if(new Date()>VENCE){document.getElementById('vencida').classList.add('on');return}
+
+  var I='/demo/sabor-callejero/img/';
+  var MENU=[
+    {cat:'Hamburguesas',items:[
+      {id:'h1',n:'Clásica con queso',d:'Carne de res a la parrilla, queso amarillo, lechuga, tomate y salsa de la casa.',p:5.50,img:'clasica'},
+      {id:'h2',n:'Bacon BBQ',d:'Doble tocino crujiente, queso blanco y salsa barbacoa ahumada.',p:6.75,img:'tocino'},
+      {id:'h3',n:'La Callejera',d:'Doble carne, huevo frito, queso y nuestra salsa picante. Para los que vienen con hambre.',p:7.95,img:'doble'}]},
+    {cat:'Shawarmas',items:[
+      {id:'s1',n:'Shawarma de pollo',d:'Pollo marinado, papas, ensalada y salsa de ajo, en pan árabe tostado.',p:5.00,img:'shawarma-pollo'},
+      {id:'s2',n:'Shawarma de carne',d:'Carne sazonada al estilo árabe, tomate, cebolla y tahini.',p:5.50,img:'shawarma-carne'},
+      {id:'s3',n:'Shawarma mixto',d:'Pollo y carne juntos, con doble salsa de ajo.',p:6.25,img:'shawarma-pollo'}]},
+    {cat:'Pizzas',items:[
+      {id:'z1',n:'Pepperoni mediana',d:'Masa fina, salsa de tomate, mozzarella y mucho pepperoni.',p:10.50,img:'pizza-pepperoni'},
+      {id:'z2',n:'Hawaiana mediana',d:'Jamón, piña y mozzarella derretida.',p:10.50,img:'pizza-hawaiana'}]},
+    {cat:'Papas',items:[
+      {id:'p1',n:'Papas fritas',d:'Crujientes por fuera y suaves por dentro, con sal de la casa.',p:2.50,img:'papas'},
+      {id:'p2',n:'Papas con queso',d:'Bañadas en queso cheddar derretido.',p:3.75,img:'papas-queso'},
+      {id:'p3',n:'Salchipapas',d:'Papas fritas con salchicha en trocitos, kétchup y mostaza.',p:4.25,img:'papas'}]},
+    {cat:'Bebidas',lista:true,items:[
+      {id:'b1',n:'Soda',d:'Lata de 12 oz',p:1.25},
+      {id:'b2',n:'Chicha del día',d:'Natural, pregunta el sabor',p:1.50},
+      {id:'b3',n:'Agua',d:'Botella de 500 ml',p:1.00}]}
+  ];
+  var COMBOS=[
+    {id:'c1',n:'Combo Clásico',d:'Hamburguesa clásica con queso, papas fritas y soda.',p:7.99},
+    {id:'c2',n:'Combo Shawarma',d:'Shawarma de pollo, papas fritas y soda.',p:7.50},
+    {id:'c3',n:'Combo Familiar',d:'Dos pizzas medianas a elegir y cuatro sodas.',p:22.99}
+  ];
+  var porId={}; MENU.forEach(function(c){c.items.forEach(function(i){porId[i.id]=i})}); COMBOS.forEach(function(i){porId[i.id]=i});
+  var cart={}; var $=function(id){return document.getElementById(id)};
+  var money=function(v){return '$'+v.toFixed(2)};
+  var slug=function(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,'-')};
+  var ctrl=function(it){return '<div class="plato-pie"><span class="precio">'+money(it.p)+'</span><button class="agregar" type="button" data-add="'+it.id+'">Agregar</button><div class="cant"><button type="button" data-menos="'+it.id+'" aria-label="Quitar uno">−</button><span data-q="'+it.id+'">0</span><button type="button" data-add="'+it.id+'" aria-label="Agregar uno">+</button></div></div>'};
+
+  $('tabs').innerHTML=MENU.map(function(c,i){return '<button class="tab" role="tab" type="button" data-ir="'+slug(c.cat)+'" aria-current="'+(i===0)+'">'+c.cat+'</button>'}).join('');
+  $('cats').innerHTML=MENU.map(function(c){
+    var cuerpo=c.lista
+      ? '<div class="lista">'+c.items.map(function(it){return '<div class="fila plato" data-card="'+it.id+'"><div><b>'+it.n+'</b><small>'+it.d+'</small></div>'+ctrl(it).replace('class="plato-pie"','class="plato-pie" style="margin:0;padding:0;gap:10px"')+'</div>'}).join('')+'</div>'
+      : '<div class="platos">'+c.items.map(function(it){return '<article class="plato" data-card="'+it.id+'"><div class="ph"><img src="'+I+it.img+'.webp" alt="'+it.n+'" width="900" height="675" loading="lazy"></div><div class="plato-tx"><b>'+it.n+'</b><p>'+it.d+'</p>'+ctrl(it)+'</div></article>'}).join('')+'</div>';
+    return '<div class="cat" id="'+slug(c.cat)+'"><h3>'+c.cat+'</h3>'+cuerpo+'</div>'}).join('');
+  $('combo-grid').innerHTML=COMBOS.map(function(it){return '<div class="combo plato" data-card="'+it.id+'"><b>'+it.n+'</b><p>'+it.d+'</p>'+ctrl(it)+'</div>'}).join('');
+
+  function pintar(){
+    var n=0,t=0,li=[];
+    Object.keys(cart).forEach(function(id){var q=cart[id],it=porId[id];n+=q;t+=q*it.p;li.push('<li><span>'+q+' × '+it.n+'</span><span>'+money(q*it.p)+'</span></li>')});
+    document.querySelectorAll('[data-card]').forEach(function(el){var q=cart[el.dataset.card]||0;el.classList.toggle('en',q>0);var s=el.querySelector('[data-q]');if(s)s.textContent=q});
+    $('n').textContent=n; $('total-bar').textContent=money(t); $('total').textContent=money(t);
+    $('items').innerHTML=li.join('')||'<li><span>Tu pedido está vacío.</span></li>';
+    $('carrito').classList.toggle('on',n>0);
+    return {n:n,t:t};
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-add]'),m=e.target.closest('[data-menos]'),ir=e.target.closest('[data-ir]');
+    if(a){cart[a.dataset.add]=(cart[a.dataset.add]||0)+1;pintar();var b=$('n');b.classList.remove('pulso');void b.offsetWidth;b.classList.add('pulso')}
+    if(m){var id=m.dataset.menos;cart[id]=(cart[id]||0)-1;if(cart[id]<=0)delete cart[id];pintar()}
+    if(ir){document.getElementById(ir.dataset.ir).scrollIntoView({behavior:'smooth'})}
+    if(e.target.closest('[data-cerrar]')||e.target===$('velo'))cerrar();
+  });
+  var entrega='Delivery';
+  document.querySelectorAll('[data-ent]').forEach(function(b){b.addEventListener('click',function(){entrega=b.dataset.ent;document.querySelectorAll('[data-ent]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});$('campo-dir').style.display=entrega==='Delivery'?'':'none'})});
+  function abrir(el){$('velo').classList.add('on');el.classList.add('on');el.setAttribute('aria-hidden','false')}
+  function cerrar(){['panel','modal'].forEach(function(id){$(id).classList.remove('on');$(id).setAttribute('aria-hidden','true')});$('velo').classList.remove('on')}
+  $('ver-pedido').addEventListener('click',function(){abrir($('panel'))});
+  $('enviar').addEventListener('click',function(){
+    var r=pintar(); if(!r.n)return;
+    var l=Object.keys(cart).map(function(id){return '• '+cart[id]+' × '+porId[id].n+' ('+money(cart[id]*porId[id].p)+')'}).join('\n');
+    var txt='🍔 Nuevo pedido para '+NEGOCIO+'\n\n'+l+'\n\nTotal: '+money(r.t)+'\nEntrega: '+entrega+($('nom').value.trim()?'\nNombre: '+$('nom').value.trim():'')+(entrega==='Delivery'&&$('dir').value.trim()?'\nDirección: '+$('dir').value.trim():'')+($('nota').value.trim()?'\nNota: '+$('nota').value.trim():'');
+    $('burbuja').textContent=txt;
+    $('panel').classList.remove('on'); abrir($('modal'));
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')cerrar()});
+  document.addEventListener('contextmenu',function(e){if(e.target.closest('.ph'))e.preventDefault()});
+
+  if('IntersectionObserver' in window){
+    var tabs=[].slice.call(document.querySelectorAll('.tab'));
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){tabs.forEach(function(t){var on=t.dataset.ir===en.target.id;t.setAttribute('aria-current',on);if(on)t.scrollIntoView({block:'nearest',inline:'center'})})}})},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('.cat').forEach(function(c){io.observe(c)});
+  }
+  pintar();
+})();
+</script>
+</body>
+</html>
