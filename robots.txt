@@ -37,4 +37,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://zionwebpa.vercel.app/sitemap.xml
+Sitemap: https://zionwebpa.com/sitemap.xml
