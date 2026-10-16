@@ -60,9 +60,9 @@ h1,h2,h3{font-family:var(--f-d);margin:0;letter-spacing:-.01em;text-wrap:balance
 
 /* Portada */
 .hero{background:var(--mostaza);padding-block:28px 56px;overflow:hidden}
-.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
 @media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr;gap:48px}}
-.hero h1{font-size:clamp(2.9rem,8vw,5.6rem);line-height:.88;font-weight:800;font-stretch:75%;text-transform:uppercase;animation:sube 700ms var(--ease) both}
+.hero h1{font-size:clamp(2.3rem,10.5vw,5.6rem);overflow-wrap:break-word;line-height:.88;font-weight:800;font-stretch:75%;text-transform:uppercase;animation:sube 700ms var(--ease) both}
 .hero p{font-size:1.125rem;max-width:44ch;margin:18px 0 0;animation:sube 700ms var(--ease) 90ms both}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;animation:sube 700ms var(--ease) 150ms both}
 .chips span{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.65);font-weight:600;font-size:.875rem}
