@@ -8,10 +8,10 @@
 - Entrega: 5 días hábiles; express en 72 horas
 
 ## Planes (precio de creación, pago único)
-- Página web: $100. Una página con servicios, fotos, horario, mapa y botón de WhatsApp. Incluye aplicación web instalable.
-- Web de negocio: $250. Hasta 5 secciones, galería, formulario y estadísticas de visitas. Incluye aplicación web instalable.
-- Catálogo o tienda: $290. Productos con foto y precio, pedidos por WhatsApp y panel para cambiar precios.
-- Funciones extra: reservas y citas (+$45), menú o catálogo digital (+$40), cotizador (+$55), pagos en línea con Yappy, PayPal o tarjeta (+$80), español e inglés (+$40), logo (+$55).
+- Página web: $100. Tus productos o servicios con fotos y precios (menú, lista de servicios o catálogo), horario, mapa, botón de WhatsApp y pago con Yappy por QR. Incluye aplicación web instalable.
+- Tienda en línea: $290. Todo lo de la página web, más catálogo grande por categorías, carrito con pedidos por WhatsApp y precios que el cliente cambia desde una hoja de Google.
+- Mejorar mi página actual: desde $120. Rediseño completo en el mismo dominio.
+- Extras opcionales: pedidos con carrito (+$45), citas o reservas (+$45), pagos en línea con tarjeta o Yappy usando la cuenta de comercio del cliente (+$80), página en inglés (+$40), logo nuevo (+$55).
 - Hosting aparte: $25 al año con dirección gratis (tunegocio.pages.dev), $70 al año con dominio .com propio, o plan mensual de $18 con cambios pequeños incluidos.
 
 ## Cómo funciona
