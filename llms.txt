@@ -1,0 +1,31 @@
+# Zion Web
+
+> Agencia de diseño de páginas web y aplicaciones web a la medida en Panamá. Primero ves tu página de muestra gratis y pagas solo si te convence. Precios desde $100 (USD).
+
+- Sitio: https://zionwebpa.vercel.app/
+- WhatsApp: +507 6120-6962 (https://wa.me/50761206962)
+- Zona: todo Panamá, atención por WhatsApp
+- Entrega: 5 días hábiles; express en 72 horas
+
+## Planes (precio de creación, pago único)
+- Página web: $100. Una página con servicios, fotos, horario, mapa y botón de WhatsApp. Incluye aplicación web instalable.
+- Web de negocio: $250. Hasta 5 secciones, galería, formulario y estadísticas de visitas. Incluye aplicación web instalable.
+- Catálogo o tienda: $290. Productos con foto y precio, pedidos por WhatsApp y panel para cambiar precios.
+- Funciones extra: reservas y citas (+$45), menú o catálogo digital (+$40), cotizador (+$55), pagos en línea con Yappy, PayPal o tarjeta (+$80), español e inglés (+$40), logo (+$55).
+- Dominio y hosting aparte: $70 al año, o plan mensual de $18 con cambios pequeños incluidos.
+
+## Cómo funciona
+1. El cliente escribe DEMO por WhatsApp.
+2. Zion Web arma una página de muestra gratis con su logo, fotos y servicios.
+3. Si le gusta, paga y se publica. Si no, no paga nada.
+
+## Páginas por tipo de negocio
+- [Páginas web para restaurantes y cafeterías en Panamá](https://zionwebpa.vercel.app/paginas-web-para-restaurantes)
+- [Páginas web para salones de belleza, spas y barberías en Panamá](https://zionwebpa.vercel.app/paginas-web-para-salones-de-belleza)
+- [Páginas web para clínicas y consultorios en Panamá](https://zionwebpa.vercel.app/paginas-web-para-clinicas)
+- [Páginas web para tiendas y emprendimientos en Panamá](https://zionwebpa.vercel.app/paginas-web-para-tiendas)
+- [Páginas web para abogados, corredores y servicios profesionales en Panamá](https://zionwebpa.vercel.app/paginas-web-para-servicios-profesionales)
+
+## Trabajos
+- Delgado Escalante, corredora de seguros: https://segurosdelgadoescalante.com
+- Sutil Estudio by Clara, estudio de belleza en Colón: https://sutilbyclara.vercel.app
