@@ -11,7 +11,7 @@
 - Página web: $100. Tus productos o servicios con fotos y precios (menú, lista de servicios o catálogo), horario, mapa, botón de WhatsApp y pago con Yappy por QR. En español e inglés, con botón para cambiar de idioma. Incluye aplicación web instalable.
 - Tienda en línea: $290. Todo lo de la página web, más catálogo grande por categorías, carrito con pedidos por WhatsApp y precios que el cliente cambia desde una hoja de Google.
 - Mejorar mi página actual: desde $120. Rediseño completo en el mismo dominio.
-- Extras opcionales: pedidos con carrito (+$45), citas o reservas (+$45), pagos en línea con tarjeta o Yappy usando la cuenta de comercio del cliente (+$80), logo nuevo (+$55).
+- Extras opcionales, cotizados aparte según cada negocio: pedidos con carrito, citas o reservas, pagos en línea con tarjeta o Yappy usando la cuenta de comercio del cliente, y logo nuevo.
 - Hosting aparte: $25 al año con dirección gratis (tunegocio.pages.dev), $70 al año con dominio .com propio, o plan mensual de $18 con cambios pequeños incluidos.
 
 ## Cómo funciona
