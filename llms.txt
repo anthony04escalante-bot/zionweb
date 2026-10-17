@@ -12,7 +12,7 @@
 - Tienda en línea: $290. Todo lo de la página web, más catálogo grande por categorías, carrito con pedidos por WhatsApp y precios que el cliente cambia desde una hoja de Google.
 - Mejorar mi página actual: desde $120. Rediseño completo en el mismo dominio.
 - Extras opcionales, cotizados aparte según cada negocio: pedidos con carrito, citas o reservas, pagos en línea con tarjeta o Yappy usando la cuenta de comercio del cliente, y logo nuevo.
-- Hosting aparte: $25 al año con dirección gratis (tunegocio.pages.dev), $70 al año con dominio .com propio, o plan mensual de $18 con cambios pequeños incluidos.
+- Hosting aparte: $25 al año con dirección web (tunegocio.pages.dev) o $70 al año con dominio .com propio. Mantenimiento opcional de $18 al mes para cambios pequeños como precios, fotos y horarios.
 
 ## Cómo funciona
 1. El cliente escribe DEMO por WhatsApp.
