@@ -24,6 +24,11 @@ h1,h2,h3{font-family:var(--f-d);font-weight:700;margin:0;text-wrap:balance;lette
 .lead{color:var(--gris);font-size:1.125rem;max-width:60ch}section{padding-block:clamp(56px,8vw,96px)}
 .nav{position:sticky;top:0;z-index:10;background:rgba(245,249,246,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.idioma{display:inline-flex;align-items:center;min-height:36px;padding:3px;border-radius:999px;border:1.5px solid var(--linea);background:#fff;font:700 .75rem/1 var(--f-d);letter-spacing:.04em;cursor:pointer;color:var(--gris)}
+.idioma span{padding:6px 9px;border-radius:999px}
+.idioma span.on{background:var(--tinta);color:#fff}
+.idioma:focus-visible{outline:3px solid var(--verde);outline-offset:2px}
+.nav-acc{display:flex;align-items:center;gap:10px}
 .brand{display:inline-flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none;color:var(--tinta)}
 .logo{display:flex;align-items:center;gap:.16em;font:400 26px/1 "Michroma","Arial Black",sans-serif}.logo svg{width:.86em;height:.86em}.logo .pupila{fill:var(--verde)}
 .logo-web{font:400 8px/1 "Michroma",sans-serif;letter-spacing:1.15em;padding-left:1.15em;color:var(--gris)}
@@ -52,9 +57,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Páginas web para abogados, corredores y servicios profesionales en Panamá", "serviceType": "Diseño de páginas web", "description": "Página web para tu despacho, correduría o servicio profesional en Panamá con tus servicios, citas y contacto por WhatsApp. Desde $100.", "provider": {"@type": "ProfessionalService", "@id": "https://zionwebpa.com/#negocio", "name": "Zion Web", "url": "https://zionwebpa.com/"}, "areaServed": {"@type": "Country", "name": "Panamá"}, "url": "https://zionwebpa.com/paginas-web-para-servicios-profesionales", "offers": {"@type": "Offer", "price": "100", "priceCurrency": "USD", "description": "Página web $100 con tus servicios, precios y WhatsApp"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://zionwebpa.com/"}, {"@type": "ListItem", "position": 2, "name": "Servicios profesionales", "item": "https://zionwebpa.com/paginas-web-para-servicios-profesionales"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puedo tener un cotizador como el de Delgado Escalante?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Un cotizador con tus propias reglas es un proyecto a la medida: te lo cotizamos aparte según lo que necesites calcular."}}, {"@type": "Question", "name": "¿Sirve para abogados, contadores o talleres?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Adaptamos los servicios y los textos a tu oficio."}}, {"@type": "Question", "name": "¿Puedo ver cómo quedaría antes de pagar?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Te armamos una página de muestra gratis. Si no te convence, no pagas nada."}}]}]}</script>
+<script src="/i18n-en.js" defer></script>
+<script src="/i18n.js" defer></script>
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="/" aria-label="Zion Web, inicio"><span class="logo" aria-hidden="true"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span></a><a class="btn btn-pri" href="/#cotizar">Cotizar gratis</a></div></header>
+<header class="nav"><div class="wrap"><a class="brand" href="/" aria-label="Zion Web, inicio"><span class="logo" aria-hidden="true"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span></a><div class="nav-acc"><span data-idioma></span><a class="btn btn-pri" href="/#cotizar">Cotizar gratis</a></div></div></header>
 <main>
 <div class="wrap migas"><a href="/">Inicio</a> › Servicios profesionales</div>
 <section style="padding-top:0"><div class="wrap hero">

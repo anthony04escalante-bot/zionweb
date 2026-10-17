@@ -65,6 +65,11 @@ section{padding-block:clamp(72px,10vw,120px)}
 /* Navegación */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--fondo)}
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:rgba(245,249,246,.78);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid transparent;transition:border-color 200ms ease}
+.idioma{display:inline-flex;align-items:center;min-height:36px;padding:3px;border-radius:999px;border:1.5px solid var(--linea);background:#fff;font:700 .75rem/1 var(--f-d,inherit);letter-spacing:.04em;cursor:pointer;color:var(--gris)}
+.idioma span{padding:6px 9px;border-radius:999px}
+.idioma span.on{background:var(--tinta);color:#fff}
+.idioma:focus-visible{outline:3px solid var(--verde);outline-offset:2px}
+.nav-acc{display:flex;align-items:center;gap:10px}
 .nav.scrolled{border-bottom-color:var(--linea)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
 .brand{display:inline-flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none;color:var(--tinta)}
@@ -310,13 +315,15 @@ footer p{color:var(--gris);font-size:.9375rem}
 }
 </style>
 
+<script src="/i18n-en.js" defer></script>
+<script src="/i18n.js" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://zionwebpa.com/#negocio", "name": "Zion Web", "url": "https://zionwebpa.com/", "image": "https://zionwebpa.com/og.jpg", "logo": "https://zionwebpa.com/apple-touch-icon.png", "description": "Agencia de diseño de páginas web y aplicaciones web a la medida en Panamá. Primero ves tu página de muestra gratis y pagas solo si te convence. Desde $100.", "telephone": "+507 6120-6962", "priceRange": "$100 - $290", "currenciesAccepted": "USD", "areaServed": {"@type": "Country", "name": "Panamá"}, "address": {"@type": "PostalAddress", "addressCountry": "PA"}, "slogan": "Primero la ves, después pagas", "contactPoint": {"@type": "ContactPoint", "telephone": "+507 6120-6962", "contactType": "ventas", "availableLanguage": ["es", "en"]}, "knowsAbout": ["diseño web", "páginas web", "aplicaciones web", "tiendas en línea", "SEO"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Planes de páginas web", "itemListElement": [{"@type": "Offer", "name": "Página web", "price": "100", "priceCurrency": "USD", "description": "Tus productos o servicios con fotos y precios, horario, mapa y WhatsApp. En español e inglés, con aplicación web instalable."}, {"@type": "Offer", "name": "Tienda en línea", "price": "290", "priceCurrency": "USD", "description": "Catálogo grande por categorías, carrito, pedidos por WhatsApp y precios que cambias tú mismo."}, {"@type": "Offer", "name": "Mejorar mi página actual", "price": "120", "priceCurrency": "USD", "description": "Rediseño completo de una página existente, en el mismo dominio. Desde $120."}]}}, {"@type": "WebSite", "@id": "https://zionwebpa.com/#sitio", "url": "https://zionwebpa.com/", "name": "Zion Web", "inLanguage": "es-PA", "publisher": {"@id": "https://zionwebpa.com/#negocio"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿El demo de verdad es gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Te mostramos tu página funcionando, con tu logo, tus fotos y tus servicios. Si no te convence, no pagas nada."}}, {"@type": "Question", "name": "¿Cuánto tarda mi página?", "acceptedAnswer": {"@type": "Answer", "text": "Cinco días hábiles desde que recibimos tu logo, fotos, textos y precios. Con entrega express, 72 horas."}}, {"@type": "Question", "name": "¿Mi página viene en inglés?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, sin costo extra. Tu página va en español y, con un botón arriba, tus clientes la cambian a inglés. Ideal si te visitan turistas o extranjeros."}}, {"@type": "Question", "name": "¿Puedo pedir cambios?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Ajustamos el demo contigo antes de publicar. Después, el plan mensual incluye los cambios pequeños, como precios, fotos y horarios."}}, {"@type": "Question", "name": "¿Los $100 incluyen el dominio y el hosting?", "acceptedAnswer": {"@type": "Answer", "text": "No. Los $100 son la creación de tu página. Para publicarla eliges hosting por un año con dirección gratis ($25), hosting y dominio .com por un año ($70), el plan mensual ($18 al mes) o, si ya los tienes, $0."}}, {"@type": "Question", "name": "¿Qué pasa después del primer año?", "acceptedAnswer": {"@type": "Answer", "text": "Renuevas el hosting ($25) o el hosting con tu .com ($70), o pasas al plan mensual, que ya los incluye. Puedes empezar con la dirección gratis y sumar tu .com cuando quieras."}}, {"@type": "Question", "name": "¿Cómo pago?", "acceptedAnswer": {"@type": "Answer", "text": "Pagas cuando apruebas tu demo. Te enviamos las formas de pago por WhatsApp al confirmar."}}]}]}</script>
 </head>
 <body>
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="Zion Web, inicio">
-      <span class="logo" aria-hidden="true"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span>
+      <span class="logo" aria-hidden="true" translate="no"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span>
     </a>
     <nav class="links" aria-label="Secciones">
       <a href="#precios">Precios</a>
@@ -325,7 +332,7 @@ footer p{color:var(--gris);font-size:.9375rem}
       <a href="#trabajos">Trabajos</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
-    <a class="btn btn-pri" href="#cotizar">Cotizar gratis</a>
+    <div class="nav-acc"><span data-idioma></span><a class="btn btn-pri" href="#cotizar">Cotizar gratis</a></div>
   </div>
 </header>
 
@@ -370,7 +377,7 @@ footer p{color:var(--gris);font-size:.9375rem}
       <h2>Planes y precios</h2>
       <p class="lead">El precio es la creación de tu página, de una vez. El hosting y el dominio se pagan aparte y los explicamos abajo.</p>
     </div>
-    <div class="bilingue" data-r><span class="idi" aria-hidden="true"><span>ES</span><span>EN</span></span><p><b>Nuevo: tu página en español e inglés, incluida desde $100.</b> Tus clientes cambian de idioma con un botón arriba, y los turistas y extranjeros también te entienden.</p></div>
+    <div class="bilingue" data-r><span class="idi" aria-hidden="true" translate="no"><span>ES</span><span>EN</span></span><p><b>Nuevo: tu página en español e inglés, incluida desde $100.</b> Tus clientes cambian de idioma con un botón arriba, y los turistas y extranjeros también te entienden.</p></div>
     <div class="servicios">
       <article class="serv" data-r style="--d:0ms">
         <div class="serv-img"><img src="img/teclado.webp" alt="Manos escribiendo en una laptop con íconos digitales" width="1200" height="786" loading="lazy"></div>
@@ -618,7 +625,7 @@ footer p{color:var(--gris);font-size:.9375rem}
   <div class="wrap">
     <div style="display:flex;flex-direction:column;gap:10px">
       <a class="brand" href="#inicio" aria-label="Zion Web, inicio">
-        <span class="logo" aria-hidden="true"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span>
+        <span class="logo" aria-hidden="true" translate="no"><span>ZI</span><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><rect class="pupila" x="42" y="24" width="16" height="52" rx="8"/></svg><span>N</span></span><span class="logo-web" aria-hidden="true">WEB</span>
       </a>
       <p>Páginas web y aplicaciones a la medida en Panamá.</p>
       <nav class="rubros" aria-label="Páginas web por tipo de negocio"><a href="/paginas-web-para-restaurantes">Restaurantes</a><a href="/paginas-web-para-salones-de-belleza">Salones y spas</a><a href="/paginas-web-para-clinicas">Clínicas</a><a href="/paginas-web-para-tiendas">Tiendas</a><a href="/paginas-web-para-servicios-profesionales">Servicios profesionales</a></nav>
